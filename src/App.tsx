@@ -6,7 +6,7 @@ import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import WaterLiquidBackground from "./components/WaterLiquidBackground";
 import BubbleAnimation from "./components/BubbleAnimation";
-import Projects from "./components/Projects/Projects"; 
+import Projects from "./components/Projects/Projects";
 import ContactForm from "./components/ContactForm";
 
 
