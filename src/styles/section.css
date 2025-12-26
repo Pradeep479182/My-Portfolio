@@ -1,0 +1,37 @@
+.section {
+  background: rgba(15, 23, 42, 0.85);
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 80px;
+  box-shadow: 0 0 40px rgba(0,255,255,0.15);
+  color: white;
+}
+
+.section h2 {
+  color: #67e8f9;
+  margin-bottom: 16px;
+}
+
+.section p {
+  color: #cbd5f5;
+  line-height: 1.7;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  background: #22d3ee;
+  color: #020617;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .section {
+    padding: 25px;
+  }
+}

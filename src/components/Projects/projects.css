@@ -1,0 +1,108 @@
+.projects-section {
+  padding: 2rem;
+  background: #020617; /* dark container background */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* spread box shadow */
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.projects-section h2 {
+  color: #22d3ee; /* cyan like skill icon */
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Project Card = Skill bubble style */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center content like skill bubble */
+  gap: 12px;
+  background: #0d1117; /* bubble dark background */
+  padding: 1.5rem;
+  border-radius: 20px; /* bubble radius */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* shadow like skills */
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* Gradient bar at bottom like bubble bar */
+.project-bar {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 6px;
+  width: 90%;
+  background: #020617;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22d3ee, #06b6d4);
+  border-radius: 10px;
+  width: 0%;
+  transition: width 1.2s ease;
+}
+
+/* Project Name & Description */
+.project-name {
+  font-weight: 600;
+  color: #e5e7eb;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.project-description {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  text-align: center;
+}
+
+/* Tags */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.project-tag {
+  background-color: rgba(34,211,238,0.2);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  color: #22d3ee;
+}
+
+/* View Project Button */
+.view-btn {
+  margin-top: auto;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: rgba(34,211,238,0.2);
+  border-radius: 10px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.view-btn:hover {
+  background: rgba(34,211,238,0.4);
+}

@@ -1,0 +1,82 @@
+.skills-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center; /* Center horizontally */
+}
+
+/* Skill bubble container */
+.skill-bubble {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #0d1117;
+  padding: 10px 14px;
+  border-radius: 20px;
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  justify-content: center; /* Center content inside bubble */
+}
+
+/* Icon */
+.skill-icon {
+  font-size: 22px;
+  color: #22d3ee;
+  display: flex;
+  align-items: center;
+}
+
+.skill-icon svg {
+  animation: rotate 6s linear infinite;
+}
+
+/* Name */
+.skill-name {
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+/* Bubble bar */
+.bubble-bar {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 6px;
+  width: 90%;
+  background: #020617;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bubble-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22d3ee, #06b6d4);
+  border-radius: 10px;
+  width: 0%;
+  transition: width 1.2s ease;
+}
+
+/* Percent text */
+.skill-percent {
+  font-weight: 600;
+  font-size: 14px;
+  color: #22d3ee;
+  margin-left: 8px;
+}
+
+/* Optional rotation animation */
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
