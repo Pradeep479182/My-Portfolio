@@ -34,11 +34,12 @@ const Projects = () => {
     return (
       <section style={{
         padding: '2rem',
-        background: '#020617',
+        background: '#0a0a0a',
         borderRadius: '15px',
-        boxShadow: '0 8px 20px rgba(0,0,0,0.3)',
+        boxShadow: '0 8px 20px rgba(0,0,0,0.6)',
         margin: '2rem auto',
         maxWidth: '1200px',
+        border: '1px solid #1a1a1a',
       }}>
         <h2 style={{
           color: '#22d3ee',
@@ -111,11 +112,12 @@ const Projects = () => {
   return (
     <section style={{
       padding: '2rem',
-      background: '#020617',
+      background: '#0a0a0a',
       borderRadius: '15px',
-      boxShadow: '0 8px 20px rgba(0,0,0,0.3)',
+      boxShadow: '0 8px 20px rgba(0,0,0,0.6)',
       margin: '2rem auto',
       maxWidth: '1200px',
+      border: '1px solid #1a1a1a',
     }}>
       <h2 style={{
         color: '#22d3ee',

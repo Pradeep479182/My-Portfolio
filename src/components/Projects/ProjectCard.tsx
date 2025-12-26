@@ -15,12 +15,13 @@ const ProjectCard: FC<ProjectCardProps> = ({ repo }) => {
         flexDirection: 'column',
         alignItems: 'center',
         gap: '12px',
-        background: '#0d1117',
+        background: '#000000',
         padding: '1.5rem',
         borderRadius: '20px',
-        boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.5)',
         position: 'relative',
         transition: 'all 0.3s ease',
+        border: '1px solid #1a1a1a',
       }}
     >
       <h3 style={{
@@ -33,14 +34,34 @@ const ProjectCard: FC<ProjectCardProps> = ({ repo }) => {
         {repo.name}
       </h3>
       
-      <p style={{
-        fontSize: '0.95rem',
-        color: '#cbd5e1',
-        textAlign: 'center',
-        margin: 0,
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.5rem',
+        padding: '0.4rem 1rem',
+        background: 'rgba(34,211,238,0.2)',
+        borderRadius: '20px',
+        fontSize: '0.9rem',
+        color: '#22d3ee',
+        fontWeight: 600,
+        border: '1px solid rgba(34,211,238,0.3)',
       }}>
-        {repo.description || "No description"}
-      </p>
+        <span style={{ fontSize: '1rem' }}>💻</span>
+        {repo.language || 'Multiple Languages'}
+      </div>
+      
+      {repo.stargazers_count > 0 && (
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          gap: '0.3rem',
+          fontSize: '0.85rem',
+          color: '#fbbf24',
+        }}>
+          <span>⭐</span>
+          {repo.stargazers_count}
+        </div>
+      )}
       
       <div style={{
         display: 'flex',

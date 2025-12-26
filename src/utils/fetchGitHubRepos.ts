@@ -5,6 +5,8 @@ export interface GitHubRepo {
   homepage: string | null;
   description: string | null;
   topics: string[];
+  language: string | null;
+  stargazers_count: number;
 }
 
 const GITHUB_USERNAME = "Pradeep479182";
@@ -30,13 +32,13 @@ export const fetchGitHubRepos = async (): Promise<GitHubRepo[]> => {
     
     const filteredRepos = data
       .filter((repo: any) => {
-        const isNotPortfolio = repo.name !== PORTFOLIO_REPO;
+        // Show all public repos that are not forks
         const isNotFork = !repo.fork;
         const isPublic = !repo.private;
         
-        console.log(`Repo: ${repo.name} - Portfolio: ${!isNotPortfolio}, Fork: ${!isNotFork}, Private: ${!isPublic}`);
+        console.log(`Repo: ${repo.name} - Fork: ${!isNotFork}, Private: ${!isPublic}`);
         
-        return isNotPortfolio && isNotFork && isPublic;
+        return isNotFork && isPublic;
       })
       .map((repo: any) => ({
         id: repo.id,
